@@ -1,0 +1,38 @@
+## This file can be used to define dynamic routers/services/middlewares.
+http:
+  services:
+    proxmox:
+      loadBalancer:
+        servers:
+          - url: "https://proxmox:8006"
+    truenas:
+      loadBalancer:
+        servers:
+          - url: "https://truenas"
+    adguard:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.1.107:80"
+  
+  routers:
+    proxmox:
+      entrypoints: 
+        - 'https'
+      rule: 'Host(`proxmox.home.{{ env "BASE_DOMAIN" }}`)'
+      service: 'proxmox'
+      tls:
+        certresolver: 'cloudflare'
+    truenas:
+      entrypoints: 
+        - 'https'
+      rule: 'Host(`truenas.home.{{ env "BASE_DOMAIN" }}`)'
+      service: 'truenas'
+      tls:
+        certresolver: 'cloudflare'
+    adguard:
+      entrypoints: 
+        - 'https'
+      rule: 'Host(`adguard.home.{{ env "BASE_DOMAIN" }}`)'
+      service: 'adguard'
+      tls:
+        certresolver: 'cloudflare'
