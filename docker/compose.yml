@@ -176,7 +176,7 @@ services:
 
   filebrowser:
     container_name: 'filebrowser'
-    image: 'gtstef/filebrowser:0.8.8-beta'
+    image: 'gtstef/filebrowser:0.8.9-beta'
     restart: 'unless-stopped'
     user: $USER
     environment:
@@ -198,7 +198,7 @@ services:
       traefik.http.routers.filebrowser.tls.certResolver: 'cloudflare'
 
   jellyfin:
-    image: "ghcr.io/linuxserver/jellyfin:10.10.7"
+    image: "ghcr.io/linuxserver/jellyfin:10.11.0"
     container_name: jellyfin
     environment:
       - "PUID=1000"
