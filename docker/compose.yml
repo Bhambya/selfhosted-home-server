@@ -261,7 +261,7 @@ services:
         {{- end -}}
 
   gatus:
-    image: ghcr.io/twin/gatus:v5.27.0
+    image: ghcr.io/twin/gatus:v5.27.1
     container_name: gatus
     networks:
       proxy:
