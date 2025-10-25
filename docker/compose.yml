@@ -261,7 +261,7 @@ services:
         {{- end -}}
 
   gatus:
-    image: ghcr.io/twin/gatus:v5.28.0
+    image: ghcr.io/twin/gatus:v5.29.0
     container_name: gatus
     networks:
       proxy:
@@ -327,7 +327,7 @@ services:
       - prom_data:/prometheus
 
   node_exporter:
-    image: "quay.io/prometheus/node-exporter:v1.10.0"
+    image: "quay.io/prometheus/node-exporter:v1.10.2"
     container_name: node_exporter
     command:
       - "--path.rootfs=/host"
