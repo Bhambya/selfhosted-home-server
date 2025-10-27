@@ -198,7 +198,7 @@ services:
       traefik.http.routers.filebrowser.tls.certResolver: 'cloudflare'
 
   jellyfin:
-    image: "ghcr.io/linuxserver/jellyfin:10.11.0"
+    image: "ghcr.io/linuxserver/jellyfin:10.11.1"
     container_name: jellyfin
     environment:
       - "PUID=1000"
