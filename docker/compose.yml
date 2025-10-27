@@ -113,9 +113,7 @@ services:
 
   speedtest:
     container_name: speedtest
-    image: "ghcr.io/librespeed/speedtest:5.4.1"
-    environment:
-      - "MODE=standalone"
+    image: "ghcr.io/librespeed/speedtest-rust:v1.3.8"
     labels:
       traefik.enable: "true"
       traefik.http.routers.speedtest.tls.certResolver: 'cloudflare'
