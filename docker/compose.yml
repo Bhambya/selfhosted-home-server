@@ -113,7 +113,7 @@ services:
 
   speedtest:
     container_name: speedtest
-    image: "ghcr.io/librespeed/speedtest-rust:v1.3.8"
+    image: "ghcr.io/librespeed/speedtest-rust:v1.4.0"
     labels:
       traefik.enable: "true"
       traefik.http.routers.speedtest.tls.certResolver: 'cloudflare'
@@ -124,7 +124,7 @@ services:
     restart: "unless-stopped"
 
   mealie:
-    image: "ghcr.io/mealie-recipes/mealie:v3.3.2"
+    image: "ghcr.io/mealie-recipes/mealie:v3.4.0"
     container_name: mealie
     environment:
       - "ALLOW_SIGNUP=false"
