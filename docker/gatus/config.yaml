@@ -137,7 +137,7 @@ endpoints:
         send-on-resolved: true
 
   - name: 'Wireguard host ping'
-    url: "icmp://wireguard"
+    url: "icmp://wireguard.local"
     interval: 60s
     conditions:
       - "[CONNECTED] == true"
