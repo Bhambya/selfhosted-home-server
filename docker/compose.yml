@@ -456,7 +456,6 @@ services:
 
 networks:
   proxy:
-    external: true
     name: 'proxy'
   immich:
     name: 'immich'
