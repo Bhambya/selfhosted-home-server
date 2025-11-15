@@ -364,6 +364,9 @@ services:
       # backup paths
       - /var/lib/docker-data/apprise/config:/var/lib/docker-data/apprise/config/:ro
       - /var/lib/docker-data/backrest/config:/var/lib/docker-data/backrest/config/:ro
+      - /var/lib/docker-data/pinchflat/config:/var/lib/docker-data/pinchflat/config/:ro
+      - /var/lib/docker-data/audiobookshelf:/var/lib/docker-data/audiobookshelf/:ro
+      - /var/lib/docker-data/qbittorrent:/var/lib/docker-data/qbittorrent/:ro
       - ${IMMICH_UPLOAD_PATH}/backups:/immich/backups:ro
       # immich - very large data
       - ${IMMICH_UPLOAD_PATH}/library:/immich/library:ro
