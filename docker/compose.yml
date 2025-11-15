@@ -140,7 +140,7 @@ services:
       proxy:
     restart: "unless-stopped"
     volumes:
-      - "mealie_mealie-data:/app/data"
+      - "/var/lib/docker-data/mealie:/app/data"
 
   qbittorrent:
     image: ghcr.io/linuxserver/qbittorrent:5.1.2
@@ -463,8 +463,6 @@ networks:
   prometheus:
 
 volumes:
-  mealie_mealie-data:
-    external: true
   prom_data:
   filebrowser_data:
 
