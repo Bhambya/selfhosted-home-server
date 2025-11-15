@@ -415,7 +415,6 @@ services:
       - /var/lib/docker-data/mealie:/var/lib/docker-data/mealie/:ro
       - /var/lib/docker-data/audiobookshelf:/var/lib/docker-data/audiobookshelf/:ro
       - /var/lib/docker-data/qbittorrent:/var/lib/docker-data/qbittorrent/:ro
-      - /var/lib/docker-data/immich/db:/var/lib/docker-data/immich/db/:ro
       - ${IMMICH_UPLOAD_PATH}/backups:/immich/backups:ro
       # immich - very large data
       - ${IMMICH_UPLOAD_PATH}/library:/immich/library:ro
